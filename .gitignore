@@ -1,48 +1,45 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+/*
+!app
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+#Ignore this folder
+app/public
+app/sql
 
-# Configuration
-wp-config.php
+#app ignore inside of project name
+!app/bedrock/*
 
-# Example themes
-/wp-content/themes/twenty*/
+# Composer
+app/bedrock/vendor
 
-# Example plugin
-/wp-content/plugins/hello.php
+app/bedrock/web/wp
+app/bedrock/web/.htaccess
+app/bedrock/web/index.php
 
-# Uploads
-/wp-content/uploads/
+app/bedrock/web/app/*
+!app/bedrock/web/app/themes
+app/bedrock/web/app/themes/*
+# !app/bedrock/web/app/themes/twentytwentythree
 
-# Log files
+!app/bedrock/web/app/uploads
+app/bedrock/web/app/uploads/*
+!app/bedrock/web/app/uploads/.gitkeep
+app/bedrock/web/app/cache/*
+
+!app/bedrock/web/app/plugins
+app/bedrock/web/app/plugins/*
+!app/bedrock/web/app/plugins/.gitkeep
+
+
+#Ignor this file
+!.gitignore
+!app/bedrock/web/wp-config.php
+
+# Logs
 *.log
 
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# WP-CLI
+app/bedrock/wp-cli.local.yml
+app/bedrock/wp-cli.yml
+app/bedrock/phpcs.xml
+app/bedrock/changelog.md
+app/bedrock/.env.example
