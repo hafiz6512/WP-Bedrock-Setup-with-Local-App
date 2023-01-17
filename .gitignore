@@ -18,7 +18,7 @@ app/bedrock/web/index.php
 app/bedrock/web/app/*
 !app/bedrock/web/app/themes
 app/bedrock/web/app/themes/*
-# !app/bedrock/web/app/themes/twentytwentythree
+!app/bedrock/web/app/themes/twentytwentythree
 
 !app/bedrock/web/app/uploads
 app/bedrock/web/app/uploads/*
